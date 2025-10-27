@@ -3,57 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleformulaire.css">
     <title>Formulaire</title>
+     <style>
+    
+        label.required::before {
+      content: "*";
+      color: red;
+      margin-right: 5px;
+        }
+     </style>
 </head>
 <body>
-<header>
-    <h1>Formulaire de Contact</h1>
-</header>
-<section>
-    <form>
-    <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="fname" required>
-    <br>
-    <br><label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname" required>
-    <br>
-    <br><label for="email">Email Adress:</label>
-    <input type="email" id="email" name="email" required>
-    <br>
-    <br><label for="birthdate">Birthdate:</label>
-    <input type="date" id="birthdate" name="birthdate"><br>
-    <h2>Motive:</h2>
-    <label for="motive0">New Functionality</label>
-    <input type="checkbox" id="motive0" name="motive0" value="New">
-    <br>
-    <label for="motive1">Report a bug</label>
-    <input type="checkbox" id="motive1" name="motive1" value="Bug">
-    <br>
-    <label for="motive2">Installation request</label>
-    <input type="checkbox" id="motive2" name="motive2" value="Installation">
-    <br>
-    <label for="motive3">Other</label>
-    <input type="checkbox" id="motive3" name="motive3" value="Other">
-    <br>
+    <header class="header">
+        <h1>Formulaire de Contact</h1>
+    </header>
+    <section id="grid">
+        <form>
+            <div id="info">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required>
+                <label for="email">Email Adress:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate"><br>
+            </div>
+        <h2 class="header2">Motive:</h2>
+            <div id="motive">
+            <label for="motive0">New Functionality</label>
+            <input type="checkbox" id="motive0" name="motive0" value="New">
+            <br>
+            <label for="motive1">Report a bug</label>
+            <input type="checkbox" id="motive1" name="motive1" value="Bug">
+            <br>
+            <label for="motive2">Installation request</label>
+            <input type="checkbox" id="motive2" name="motive2" value="Installation">
+            <br>
+            <label for="motive3">Other</label>
+            <input type="checkbox" id="motive3" name="motive3" value="Other">
+            </div>
+        <br>
     
 
    
-    <h2>Message:</h2>
-    <textarea name="message" id="msg" rows="10" cols="150" required></textarea>
+        <h2 class="header3">Message:</h2>
+        <div id="message">
+            <textarea name="message" id="msg" rows="10" cols="150" required></textarea><br>
 
-    <label for="validation">I accept the conditions of utilisation</label>
-    <input type="checkbox" id="validation" name="validation" value="condition" required>
-    <br>
-    <label for="validation1">I would like to subscribe to the newsletter</label>
-    <input type="checkbox" id="validation1" name="validation1" value="condition1">
-    <br>
-    <br>
-    <input type="submit" value="Send">
-    <br>
-    <br>
-    <input type="reset" value="Erase">
-    </form>
-</section>
+            <label for="validation">I accept the conditions of utilisation</label>
+            <input type="checkbox" id="validation" name="validation" value="condition" required>
+            <br>
+            <label for="validation1">I would like to subscribe to the newsletter</label>
+            <input type="checkbox" id="validation1" name="validation1" value="condition1">
+            <br>
+            <br>
+            <div>
+            <input type="submit" value="Send">
+            <br>
+            <br>
+            <input type="reset" value="Erase">
+            </div>
+        </div>
+        </form>
+    </section>
     
 </body>
 </html>
